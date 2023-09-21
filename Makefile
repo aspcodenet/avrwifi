@@ -11,7 +11,7 @@ LDFLAGS=-mmcu=$(MCU)
 PORT=\\\\.\\COM3
 BIN=avrbuttondemo
 OUT=${BIN}.hex
-SOURCES = main.c uart.c ESP8266.c lcd.c
+SOURCES = main.c uart.c ESP8266.c lcd.c sensorFetchAndSend.c thesupersensor.c
 
 DEBUG?=1
 

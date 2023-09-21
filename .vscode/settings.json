@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "thesupersensor.h": "c",
+        "thesupersensor_config.h": "c"
+    }
+}
