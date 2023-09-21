@@ -15,6 +15,11 @@ SOURCES = main.c uart.c ESP8266.c lcd.c sensorFetchAndSend.c thesupersensor.c
 
 DEBUG?=1
 
+GTEST = gtest
+LIBGTEST = C:\msys64\mingw64\lib\libgtest_main.a C:\msys64\mingw64\lib\libgtest.a
+TEST=check.exe
+
+
 ifeq ($(DEBUG), 1)
 	OUTPUTDIR=bin/debug
 else
@@ -52,5 +57,15 @@ clean:
 
 $(OUTPUTDIR): 
 	@mkdir "$(OUTPUTDIR)"
+
+$(TEST): TestFetchAndSend.cpp
+	g++ -o $@ $^ -DF_CPU=16000000UL -I $(GTEST)  $(LIBGTEST)	
+
+
+
+
+
+test: $(TEST)
+	./$(TEST)
 		   	
 .PHONY: clean dirs

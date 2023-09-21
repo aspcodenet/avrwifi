@@ -1,6 +1,8 @@
 {
     "files.associations": {
         "thesupersensor.h": "c",
-        "thesupersensor_config.h": "c"
+        "thesupersensor_config.h": "c",
+        "esp8266.h": "c",
+        "sensorfetchandsend.c": "cpp"
     }
 }

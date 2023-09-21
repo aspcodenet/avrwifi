@@ -1,4 +1,5 @@
 #include "thesupersensor.h"
+#include "esp8266.h" 
 
 void fetchAndSend(){
     int data = supersensor_get();				// Get dummy data
